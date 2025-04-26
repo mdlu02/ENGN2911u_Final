@@ -1,0 +1,68 @@
+Conv2d: output shape (1, 64, 112, 112), kernel_size=(7, 7), stride=(2, 2)
+BatchNorm2d: output shape (1, 64, 112, 112), num_features=64
+ReLU: output shape (1, 64, 112, 112)
+MaxPool2d: output shape (1, 64, 56, 56), kernel_size=3, stride=2
+Conv2d: output shape (1, 64, 56, 56), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 64, 56, 56), num_features=64
+ReLU: output shape (1, 64, 56, 56)
+Conv2d: output shape (1, 64, 56, 56), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 64, 56, 56), num_features=64
+ReLU: output shape (1, 64, 56, 56)
+BasicBlock: output shape (1, 64, 56, 56)
+Conv2d: output shape (1, 64, 56, 56), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 64, 56, 56), num_features=64
+ReLU: output shape (1, 64, 56, 56)
+Conv2d: output shape (1, 64, 56, 56), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 64, 56, 56), num_features=64
+ReLU: output shape (1, 64, 56, 56)
+BasicBlock: output shape (1, 64, 56, 56)
+Conv2d: output shape (1, 128, 28, 28), kernel_size=(3, 3), stride=(2, 2)
+BatchNorm2d: output shape (1, 128, 28, 28), num_features=128
+ReLU: output shape (1, 128, 28, 28)
+Conv2d: output shape (1, 128, 28, 28), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 128, 28, 28), num_features=128
+Conv2d: output shape (1, 128, 28, 28), kernel_size=(1, 1), stride=(2, 2)
+BatchNorm2d: output shape (1, 128, 28, 28), num_features=128
+ReLU: output shape (1, 128, 28, 28)
+BasicBlock: output shape (1, 128, 28, 28)
+Conv2d: output shape (1, 128, 28, 28), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 128, 28, 28), num_features=128
+ReLU: output shape (1, 128, 28, 28)
+Conv2d: output shape (1, 128, 28, 28), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 128, 28, 28), num_features=128
+ReLU: output shape (1, 128, 28, 28)
+BasicBlock: output shape (1, 128, 28, 28)
+Conv2d: output shape (1, 256, 14, 14), kernel_size=(3, 3), stride=(2, 2)
+BatchNorm2d: output shape (1, 256, 14, 14), num_features=256
+ReLU: output shape (1, 256, 14, 14)
+Conv2d: output shape (1, 256, 14, 14), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 256, 14, 14), num_features=256
+Conv2d: output shape (1, 256, 14, 14), kernel_size=(1, 1), stride=(2, 2)
+BatchNorm2d: output shape (1, 256, 14, 14), num_features=256
+ReLU: output shape (1, 256, 14, 14)
+BasicBlock: output shape (1, 256, 14, 14)
+Conv2d: output shape (1, 256, 14, 14), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 256, 14, 14), num_features=256
+ReLU: output shape (1, 256, 14, 14)
+Conv2d: output shape (1, 256, 14, 14), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 256, 14, 14), num_features=256
+ReLU: output shape (1, 256, 14, 14)
+BasicBlock: output shape (1, 256, 14, 14)
+Conv2d: output shape (1, 512, 7, 7), kernel_size=(3, 3), stride=(2, 2)
+BatchNorm2d: output shape (1, 512, 7, 7), num_features=512
+ReLU: output shape (1, 512, 7, 7)
+Conv2d: output shape (1, 512, 7, 7), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 512, 7, 7), num_features=512
+Conv2d: output shape (1, 512, 7, 7), kernel_size=(1, 1), stride=(2, 2)
+BatchNorm2d: output shape (1, 512, 7, 7), num_features=512
+ReLU: output shape (1, 512, 7, 7)
+BasicBlock: output shape (1, 512, 7, 7)
+Conv2d: output shape (1, 512, 7, 7), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 512, 7, 7), num_features=512
+ReLU: output shape (1, 512, 7, 7)
+Conv2d: output shape (1, 512, 7, 7), kernel_size=(3, 3), stride=(1, 1)
+BatchNorm2d: output shape (1, 512, 7, 7), num_features=512
+ReLU: output shape (1, 512, 7, 7)
+BasicBlock: output shape (1, 512, 7, 7)
+AdaptiveAvgPool2d: output shape (1, 512, 1, 1)
+Linear: output shape (1, 1000), in_features=512, out_features=1000

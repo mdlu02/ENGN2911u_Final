@@ -1,0 +1,336 @@
+Conv2d|input_shape=(1, 3, 224, 224)|output_shape=(1, 128, 56, 56)|kernel_size=(4, 4)|stride=(4, 4)
+LayerNorm2d|input_shape=(1, 128, 56, 56)|output_shape=(1, 128, 56, 56)
+Conv2d|input_shape=(1, 128, 56, 56)|output_shape=(1, 128, 56, 56)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 128, 56, 56)|output_shape=(1, 56, 56, 128)
+LayerNorm|input_shape=(1, 56, 56, 128)|output_shape=(1, 56, 56, 128)
+Linear|input_shape=(1, 56, 56, 128)|output_shape=(1, 56, 56, 512)|in_features=128|out_features=512
+GELU|input_shape=(1, 56, 56, 512)|output_shape=(1, 56, 56, 512)
+Linear|input_shape=(1, 56, 56, 512)|output_shape=(1, 56, 56, 128)|in_features=512|out_features=128
+Permute|input_shape=(1, 56, 56, 128)|output_shape=(1, 128, 56, 56)
+StochasticDepth|input_shape=(1, 128, 56, 56)|output_shape=(1, 128, 56, 56)
+CNBlock|input_shape=(1, 128, 56, 56)|output_shape=(1, 128, 56, 56)
+Conv2d|input_shape=(1, 128, 56, 56)|output_shape=(1, 128, 56, 56)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 128, 56, 56)|output_shape=(1, 56, 56, 128)
+LayerNorm|input_shape=(1, 56, 56, 128)|output_shape=(1, 56, 56, 128)
+Linear|input_shape=(1, 56, 56, 128)|output_shape=(1, 56, 56, 512)|in_features=128|out_features=512
+GELU|input_shape=(1, 56, 56, 512)|output_shape=(1, 56, 56, 512)
+Linear|input_shape=(1, 56, 56, 512)|output_shape=(1, 56, 56, 128)|in_features=512|out_features=128
+Permute|input_shape=(1, 56, 56, 128)|output_shape=(1, 128, 56, 56)
+StochasticDepth|input_shape=(1, 128, 56, 56)|output_shape=(1, 128, 56, 56)
+CNBlock|input_shape=(1, 128, 56, 56)|output_shape=(1, 128, 56, 56)
+Conv2d|input_shape=(1, 128, 56, 56)|output_shape=(1, 128, 56, 56)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 128, 56, 56)|output_shape=(1, 56, 56, 128)
+LayerNorm|input_shape=(1, 56, 56, 128)|output_shape=(1, 56, 56, 128)
+Linear|input_shape=(1, 56, 56, 128)|output_shape=(1, 56, 56, 512)|in_features=128|out_features=512
+GELU|input_shape=(1, 56, 56, 512)|output_shape=(1, 56, 56, 512)
+Linear|input_shape=(1, 56, 56, 512)|output_shape=(1, 56, 56, 128)|in_features=512|out_features=128
+Permute|input_shape=(1, 56, 56, 128)|output_shape=(1, 128, 56, 56)
+StochasticDepth|input_shape=(1, 128, 56, 56)|output_shape=(1, 128, 56, 56)
+CNBlock|input_shape=(1, 128, 56, 56)|output_shape=(1, 128, 56, 56)
+LayerNorm2d|input_shape=(1, 128, 56, 56)|output_shape=(1, 128, 56, 56)
+Conv2d|input_shape=(1, 128, 56, 56)|output_shape=(1, 256, 28, 28)|kernel_size=(2, 2)|stride=(2, 2)
+Conv2d|input_shape=(1, 256, 28, 28)|output_shape=(1, 256, 28, 28)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 256, 28, 28)|output_shape=(1, 28, 28, 256)
+LayerNorm|input_shape=(1, 28, 28, 256)|output_shape=(1, 28, 28, 256)
+Linear|input_shape=(1, 28, 28, 256)|output_shape=(1, 28, 28, 1024)|in_features=256|out_features=1024
+GELU|input_shape=(1, 28, 28, 1024)|output_shape=(1, 28, 28, 1024)
+Linear|input_shape=(1, 28, 28, 1024)|output_shape=(1, 28, 28, 256)|in_features=1024|out_features=256
+Permute|input_shape=(1, 28, 28, 256)|output_shape=(1, 256, 28, 28)
+StochasticDepth|input_shape=(1, 256, 28, 28)|output_shape=(1, 256, 28, 28)
+CNBlock|input_shape=(1, 256, 28, 28)|output_shape=(1, 256, 28, 28)
+Conv2d|input_shape=(1, 256, 28, 28)|output_shape=(1, 256, 28, 28)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 256, 28, 28)|output_shape=(1, 28, 28, 256)
+LayerNorm|input_shape=(1, 28, 28, 256)|output_shape=(1, 28, 28, 256)
+Linear|input_shape=(1, 28, 28, 256)|output_shape=(1, 28, 28, 1024)|in_features=256|out_features=1024
+GELU|input_shape=(1, 28, 28, 1024)|output_shape=(1, 28, 28, 1024)
+Linear|input_shape=(1, 28, 28, 1024)|output_shape=(1, 28, 28, 256)|in_features=1024|out_features=256
+Permute|input_shape=(1, 28, 28, 256)|output_shape=(1, 256, 28, 28)
+StochasticDepth|input_shape=(1, 256, 28, 28)|output_shape=(1, 256, 28, 28)
+CNBlock|input_shape=(1, 256, 28, 28)|output_shape=(1, 256, 28, 28)
+Conv2d|input_shape=(1, 256, 28, 28)|output_shape=(1, 256, 28, 28)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 256, 28, 28)|output_shape=(1, 28, 28, 256)
+LayerNorm|input_shape=(1, 28, 28, 256)|output_shape=(1, 28, 28, 256)
+Linear|input_shape=(1, 28, 28, 256)|output_shape=(1, 28, 28, 1024)|in_features=256|out_features=1024
+GELU|input_shape=(1, 28, 28, 1024)|output_shape=(1, 28, 28, 1024)
+Linear|input_shape=(1, 28, 28, 1024)|output_shape=(1, 28, 28, 256)|in_features=1024|out_features=256
+Permute|input_shape=(1, 28, 28, 256)|output_shape=(1, 256, 28, 28)
+StochasticDepth|input_shape=(1, 256, 28, 28)|output_shape=(1, 256, 28, 28)
+CNBlock|input_shape=(1, 256, 28, 28)|output_shape=(1, 256, 28, 28)
+LayerNorm2d|input_shape=(1, 256, 28, 28)|output_shape=(1, 256, 28, 28)
+Conv2d|input_shape=(1, 256, 28, 28)|output_shape=(1, 512, 14, 14)|kernel_size=(2, 2)|stride=(2, 2)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 512, 14, 14)|output_shape=(1, 14, 14, 512)
+LayerNorm|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 512)
+Linear|input_shape=(1, 14, 14, 512)|output_shape=(1, 14, 14, 2048)|in_features=512|out_features=2048
+GELU|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 2048)
+Linear|input_shape=(1, 14, 14, 2048)|output_shape=(1, 14, 14, 512)|in_features=2048|out_features=512
+Permute|input_shape=(1, 14, 14, 512)|output_shape=(1, 512, 14, 14)
+StochasticDepth|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+CNBlock|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+LayerNorm2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 512, 14, 14)
+Conv2d|input_shape=(1, 512, 14, 14)|output_shape=(1, 1024, 7, 7)|kernel_size=(2, 2)|stride=(2, 2)
+Conv2d|input_shape=(1, 1024, 7, 7)|output_shape=(1, 1024, 7, 7)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 1024, 7, 7)|output_shape=(1, 7, 7, 1024)
+LayerNorm|input_shape=(1, 7, 7, 1024)|output_shape=(1, 7, 7, 1024)
+Linear|input_shape=(1, 7, 7, 1024)|output_shape=(1, 7, 7, 4096)|in_features=1024|out_features=4096
+GELU|input_shape=(1, 7, 7, 4096)|output_shape=(1, 7, 7, 4096)
+Linear|input_shape=(1, 7, 7, 4096)|output_shape=(1, 7, 7, 1024)|in_features=4096|out_features=1024
+Permute|input_shape=(1, 7, 7, 1024)|output_shape=(1, 1024, 7, 7)
+StochasticDepth|input_shape=(1, 1024, 7, 7)|output_shape=(1, 1024, 7, 7)
+CNBlock|input_shape=(1, 1024, 7, 7)|output_shape=(1, 1024, 7, 7)
+Conv2d|input_shape=(1, 1024, 7, 7)|output_shape=(1, 1024, 7, 7)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 1024, 7, 7)|output_shape=(1, 7, 7, 1024)
+LayerNorm|input_shape=(1, 7, 7, 1024)|output_shape=(1, 7, 7, 1024)
+Linear|input_shape=(1, 7, 7, 1024)|output_shape=(1, 7, 7, 4096)|in_features=1024|out_features=4096
+GELU|input_shape=(1, 7, 7, 4096)|output_shape=(1, 7, 7, 4096)
+Linear|input_shape=(1, 7, 7, 4096)|output_shape=(1, 7, 7, 1024)|in_features=4096|out_features=1024
+Permute|input_shape=(1, 7, 7, 1024)|output_shape=(1, 1024, 7, 7)
+StochasticDepth|input_shape=(1, 1024, 7, 7)|output_shape=(1, 1024, 7, 7)
+CNBlock|input_shape=(1, 1024, 7, 7)|output_shape=(1, 1024, 7, 7)
+Conv2d|input_shape=(1, 1024, 7, 7)|output_shape=(1, 1024, 7, 7)|kernel_size=(7, 7)|stride=(1, 1)
+Permute|input_shape=(1, 1024, 7, 7)|output_shape=(1, 7, 7, 1024)
+LayerNorm|input_shape=(1, 7, 7, 1024)|output_shape=(1, 7, 7, 1024)
+Linear|input_shape=(1, 7, 7, 1024)|output_shape=(1, 7, 7, 4096)|in_features=1024|out_features=4096
+GELU|input_shape=(1, 7, 7, 4096)|output_shape=(1, 7, 7, 4096)
+Linear|input_shape=(1, 7, 7, 4096)|output_shape=(1, 7, 7, 1024)|in_features=4096|out_features=1024
+Permute|input_shape=(1, 7, 7, 1024)|output_shape=(1, 1024, 7, 7)
+StochasticDepth|input_shape=(1, 1024, 7, 7)|output_shape=(1, 1024, 7, 7)
+CNBlock|input_shape=(1, 1024, 7, 7)|output_shape=(1, 1024, 7, 7)
+AdaptiveAvgPool2d|input_shape=(1, 1024, 7, 7)|output_shape=(1, 1024, 1, 1)
+LayerNorm2d|input_shape=(1, 1024, 1, 1)|output_shape=(1, 1024, 1, 1)
+Flatten|input_shape=(1, 1024, 1, 1)|output_shape=(1, 1024)
+Linear|input_shape=(1, 1024)|output_shape=(1, 1000)|in_features=1024|out_features=1000
