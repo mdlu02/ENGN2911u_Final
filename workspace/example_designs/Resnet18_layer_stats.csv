@@ -1,0 +1,22 @@
+GFLOPs,Utilization (%),Cycles,Energy (uJ),EDP (J*cycle),Area (mm^2),Computes,fJ/Compute,layer
+223.24,66.67,1053696,950.63,1000.0,0.0,118013952,"{'mac': 262.78, 'psum_spad': 3457.02, 'weights_spad': 2534.71, 'ifmap_spad': 1037.36, 'shared_glb': 222.57, 'DRAM': 540.81, 'Total': 8055.27}",Resnet18_00
+335.71,100.0,688128,1383.38,952.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3861.17, 'weights_spad': 2661.59, 'ifmap_spad': 931.12, 'shared_glb': 215.72, 'DRAM': 4034.01, 'Total': 11966.38}",Resnet18_01
+335.71,100.0,688128,1383.38,952.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3861.17, 'weights_spad': 2661.59, 'ifmap_spad': 931.12, 'shared_glb': 215.72, 'DRAM': 4034.01, 'Total': 11966.38}",Resnet18_02
+335.71,100.0,688128,1383.38,952.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3861.17, 'weights_spad': 2661.59, 'ifmap_spad': 931.12, 'shared_glb': 215.72, 'DRAM': 4034.01, 'Total': 11966.38}",Resnet18_03
+335.71,100.0,688128,1383.38,952.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3861.17, 'weights_spad': 2661.59, 'ifmap_spad': 931.12, 'shared_glb': 215.72, 'DRAM': 4034.01, 'Total': 11966.38}",Resnet18_04
+335.71,100.0,344064,492.17,169.0,0.0,57802752,"{'mac': 262.78, 'psum_spad': 3435.31, 'weights_spad': 2830.75, 'ifmap_spad': 997.02, 'shared_glb': 148.02, 'DRAM': 840.7, 'Total': 8514.58}",Resnet18_05
+335.85,100.0,688128,1739.93,1200.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3782.54, 'weights_spad': 4860.7, 'ifmap_spad': 924.64, 'shared_glb': 192.16, 'DRAM': 5027.78, 'Total': 15050.6}",Resnet18_06
+184.73,55.41,68992,74.57,5.14,0.0,6422528,"{'mac': 262.78, 'psum_spad': 3983.23, 'weights_spad': 3085.31, 'ifmap_spad': 1011.41, 'shared_glb': 625.44, 'DRAM': 2642.86, 'Total': 11611.03}",Resnet18_07
+335.85,100.0,688128,1739.93,1200.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3782.54, 'weights_spad': 4860.7, 'ifmap_spad': 924.64, 'shared_glb': 192.16, 'DRAM': 5027.78, 'Total': 15050.6}",Resnet18_08
+335.85,100.0,688128,1739.93,1200.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3782.54, 'weights_spad': 4860.7, 'ifmap_spad': 924.64, 'shared_glb': 192.16, 'DRAM': 5027.78, 'Total': 15050.6}",Resnet18_09
+335.85,100.0,344064,823.16,283.0,0.0,57802752,"{'mac': 262.78, 'psum_spad': 3411.85, 'weights_spad': 4860.7, 'ifmap_spad': 961.71, 'shared_glb': 80.61, 'DRAM': 4663.27, 'Total': 14240.92}",Resnet18_10
+335.93,100.0,688128,913.38,629.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3461.9, 'weights_spad': 2661.59, 'ifmap_spad': 987.6, 'shared_glb': 136.34, 'DRAM': 390.59, 'Total': 7900.8}",Resnet18_11
+223.12,66.67,57344,67.85,3.89,0.0,6422528,"{'mac': 262.78, 'psum_spad': 3496.21, 'weights_spad': 2661.59, 'ifmap_spad': 1011.14, 'shared_glb': 305.84, 'DRAM': 2826.53, 'Total': 10564.08}",Resnet18_12
+335.93,100.0,688128,913.38,629.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3461.9, 'weights_spad': 2661.59, 'ifmap_spad': 987.6, 'shared_glb': 136.34, 'DRAM': 390.59, 'Total': 7900.8}",Resnet18_13
+335.93,100.0,688128,913.38,629.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3461.9, 'weights_spad': 2661.59, 'ifmap_spad': 987.6, 'shared_glb': 136.34, 'DRAM': 390.59, 'Total': 7900.8}",Resnet18_14
+167.96,50.0,688128,594.09,409.0,0.0,57802752,"{'mac': 262.78, 'psum_spad': 3782.54, 'weights_spad': 2830.75, 'ifmap_spad': 961.71, 'shared_glb': 248.98, 'DRAM': 2191.04, 'Total': 10277.81}",Resnet18_15
+167.98,50.0,1376256,1107.78,1520.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3664.04, 'weights_spad': 2830.75, 'ifmap_spad': 954.65, 'shared_glb': 182.83, 'DRAM': 1687.36, 'Total': 9582.4}",Resnet18_16
+111.78,33.33,114688,59.74,6.85,0.0,6422528,"{'mac': 262.78, 'psum_spad': 3397.35, 'weights_spad': 2830.75, 'ifmap_spad': 961.71, 'shared_glb': 168.3, 'DRAM': 1681.12, 'Total': 9302.02}",Resnet18_17
+167.98,50.0,1376256,1107.78,1520.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3664.04, 'weights_spad': 2830.75, 'ifmap_spad': 954.65, 'shared_glb': 182.83, 'DRAM': 1687.36, 'Total': 9582.4}",Resnet18_18
+167.98,50.0,1376256,1107.78,1520.0,0.0,115605504,"{'mac': 262.78, 'psum_spad': 3664.04, 'weights_spad': 2830.75, 'ifmap_spad': 954.65, 'shared_glb': 182.83, 'DRAM': 1687.36, 'Total': 9582.4}",Resnet18_19
+19.98,5.95,51200,37.78,1.93,0.0,512000,"{'mac': 262.78, 'psum_spad': 3397.75, 'weights_spad': 4860.7, 'ifmap_spad': 1011.14, 'shared_glb': 62.61, 'DRAM': 64189.0, 'Total': 73783.97}",Resnet18_20

@@ -29,7 +29,7 @@ version: '3'
 services:
   labs:
     hostname: labs
-    image: timeloopaccelergy/timeloop-accelergy-pytorch:latest-${DOCKER_ARCH}
+    image: timeloopaccelergy/timeloop-accelergy-pytorch@sha256:52fd883a83e7c9cb98aa3dbf9c414728a9408038f8a898c925316a37ee75a049
     ports:
       - "8888:8888"
     volumes:
