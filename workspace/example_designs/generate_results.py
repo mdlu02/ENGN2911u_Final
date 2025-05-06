@@ -1,12 +1,23 @@
 import os
+import time
+import yaml
 import pandas as pd
 import matplotlib.pyplot as plt
 
+with open("./example_designs/eyeriss_like/arch.yaml", "r") as f:
+    CONFIG = f.readlines()
 
 DATASETS = {
-    "ConvNeXt": "ConvNeXt",
-    "AlexNet": "CONV/AlexNet",
-    "Resnet18": "resnet18",
+    # "ConvNeXt": "ConvNeXt",
+    # "AlexNet": "CONV/AlexNet",
+    # "Resnet18": "resnet18",
+    "ViT": "vision_transformer",
+}
+
+SIZES = {
+    "5060": {"__meshX__": 10, "__meshY__": 12, "__datawidth__": 2},
+    "5080": {"__meshX__": 28, "__meshY__": 12, "__datawidth__": 4},
+    "RTX Pro 6000": {"__meshX__": 64, "__meshY__": 12, "__datawidth__": 16},
 }
 
 def parse_summary_stats(file_path):
@@ -47,21 +58,32 @@ def parse_summary_stats(file_path):
     summary["fJ/Compute"] = fJ_per_compute
     return summary
 
+for accelerator, s in SIZES.items():
+    loaded_config = [x for x in CONFIG]
+    for i in range(len(loaded_config)):
+        for k, v in s.items():
+            if k in loaded_config[i]:
+                loaded_config[i] = loaded_config[i].replace(k, str(v))
+    with open("./example_designs/eyeriss_like/arch.yaml", "w") as f:
+        f.writelines(loaded_config)
 
-for model, model_path in DATASETS.items():
-    os.system(f"python3 run_example_designs.py --architecture eyeriss_like --problem {model_path} --n_jobs 6 --clear-outputs")
-    os.system(f"python3 run_example_designs.py --architecture eyeriss_like --problem {model_path} --n_jobs 6")
-
-    results = []
-    for d in os.listdir("example_designs/eyeriss_like/outputs"):
-        layer_name = f"{model}_{d}"
-        layer_stats = parse_summary_stats(f"example_designs/eyeriss_like/outputs/{d}/timeloop-mapper.stats.txt")
-        layer_stats["layer"] = layer_name
-        results.append(layer_stats)
+    for model, model_path in DATASETS.items():
+        os.system(f"python3 run_example_designs.py --architecture eyeriss_like --problem {model_path} --n_jobs 2 --clear-outputs")
+        time.sleep(1)
+        os.system(f"python3 run_example_designs.py --architecture eyeriss_like --problem {model_path} --n_jobs 2")
     
-    df = pd.DataFrame(results).sort_values("layer")
-    df.to_csv(f"{model}_layer_stats.csv", index=False)
+        results = []
+        for d in os.listdir("example_designs/eyeriss_like/outputs"):
+            layer_name = f"{model}_{d}"
+            layer_stats = parse_summary_stats(f"example_designs/eyeriss_like/outputs/{d}/timeloop-mapper.stats.txt")
+            layer_stats["layer"] = layer_name
+            results.append(layer_stats)
+        
+        df = pd.DataFrame(results).sort_values("layer")
+        df.to_csv(f"{accelerator}_{model}_layer_stats.csv", index=False)
 
+    with open("./example_designs/eyeriss_like/arch.yaml", "w") as f:
+        f.writelines(CONFIG)
 print("Done")
 
     
