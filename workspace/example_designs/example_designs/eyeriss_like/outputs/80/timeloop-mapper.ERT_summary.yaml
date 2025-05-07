@@ -3,14 +3,14 @@ ERT_summary:
     table_summary:
       - name: system_top_level.DRAM[1..1]
         actions:
+          - name: write
+            energy: 1536.0
           - name: read
-            energy: 512.0
+            energy: 1536.0
+          - name: update
+            energy: 1536.0
           - name: leak
             energy: 0.0
-          - name: write
-            energy: 512.0
-          - name: update
-            energy: 512.0
         primitive_estimation(s):
           - name: system_top_level.DRAM[1..1]
             estimator: CactiDRAM
@@ -33,7 +33,7 @@ ERT_summary:
             estimator: Neurosim Plug-In
           - name: address_generators[0..1]
             estimator: Neurosim Plug-In
-      - name: system_top_level.ifmap_spad[1..768]
+      - name: system_top_level.ifmap_spad[1..132]
         actions:
           - name: write
             energy: 1.58163
@@ -56,7 +56,7 @@ ERT_summary:
             estimator: Library
           - name: address_generators[0..1]
             estimator: Neurosim Plug-In
-      - name: system_top_level.weights_spad[1..768]
+      - name: system_top_level.weights_spad[1..132]
         actions:
           - name: write
             energy: 4.73655
@@ -79,7 +79,7 @@ ERT_summary:
             estimator: Library
           - name: address_generators[0..1]
             estimator: Neurosim Plug-In
-      - name: system_top_level.psum_spad[1..768]
+      - name: system_top_level.psum_spad[1..132]
         actions:
           - name: write
             energy: 1.58163
@@ -102,7 +102,7 @@ ERT_summary:
             estimator: Library
           - name: address_generators[0..1]
             estimator: Neurosim Plug-In
-      - name: system_top_level.mac[1..768]
+      - name: system_top_level.mac[1..132]
         actions:
           - name: compute
             energy: 0.262781

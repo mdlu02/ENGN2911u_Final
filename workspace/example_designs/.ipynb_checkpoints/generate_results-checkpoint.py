@@ -17,9 +17,9 @@ DATASETS = {
 }
 
 SIZES = {
-    "5060": {"__meshX__": 10, "__meshY__": 12, "__datawidth__": 2},
-    "5080": {"__meshX__": 28, "__meshY__": 12, "__datawidth__": 4},
-    "RTX_Pro_6000": {"__meshX__": 64, "__meshY__": 12, "__datawidth__": 16},
+    "3060": {"__meshX__": 4, "__meshY__": 6, "__width__": 64, "__datawidth__": 2},
+    "4090": {"__meshX__": 8, "__meshY__": 16, "__width__": 48, "__datawidth__": 8},
+    "H200SXM": {"__meshX__": 11, "__meshY__": 12, "__width__": 192, "__datawidth__": 32},
 }
 
 

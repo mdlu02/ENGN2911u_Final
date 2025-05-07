@@ -12,7 +12,7 @@ architecture:
     class: DRAM
     attributes:
       type: "LPDDR4"
-      width: 64
+      width: __width__
       datawidth: __datawidth__
 
   - !Container # Eyeriss accelerator

@@ -14,10 +14,10 @@
 							<level_name>mac</level_name>
 						</LevelSpecs>
 						<instances class_id="8" tracking_level="0" version="0">
-							<t_>768</t_>
+							<t_>132</t_>
 						</instances>
 						<meshX>
-							<t_>64</t_>
+							<t_>11</t_>
 						</meshX>
 						<meshY>
 							<t_>12</t_>
@@ -77,10 +77,10 @@
 							<t_>1</t_>
 						</cluster_size>
 						<instances>
-							<t_>768</t_>
+							<t_>132</t_>
 						</instances>
 						<meshX>
-							<t_>64</t_>
+							<t_>11</t_>
 						</meshX>
 						<meshY>
 							<t_>12</t_>
@@ -671,10 +671,10 @@
 							<t_>1</t_>
 						</cluster_size>
 						<instances>
-							<t_>768</t_>
+							<t_>132</t_>
 						</instances>
 						<meshX>
-							<t_>64</t_>
+							<t_>11</t_>
 						</meshX>
 						<meshY>
 							<t_>12</t_>
@@ -1265,10 +1265,10 @@
 							<t_>1</t_>
 						</cluster_size>
 						<instances>
-							<t_>768</t_>
+							<t_>132</t_>
 						</instances>
 						<meshX>
-							<t_>64</t_>
+							<t_>11</t_>
 						</meshX>
 						<meshY>
 							<t_>12</t_>
@@ -1873,10 +1873,10 @@
 							<t_>1</t_>
 						</cluster_size>
 						<instances>
-							<t_>64</t_>
+							<t_>11</t_>
 						</instances>
 						<meshX>
-							<t_>64</t_>
+							<t_>11</t_>
 						</meshX>
 						<meshY>
 							<t_>1</t_>
@@ -3654,13 +3654,13 @@
 						</technology>
 						<size></size>
 						<word_bits>
-							<t_>16</t_>
+							<t_>32</t_>
 						</word_bits>
 						<addr_gen_bits>
 							<t_>18</t_>
 						</addr_gen_bits>
 						<block_size>
-							<t_>4</t_>
+							<t_>6</t_>
 						</block_size>
 						<cluster_size>
 							<t_>1</t_>
@@ -4141,27 +4141,27 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>1.28000000000000000e+02</item>
-								<item>1.28000000000000000e+02</item>
-								<item>1.28000000000000000e+02</item>
+								<item>2.56000000000000000e+02</item>
+								<item>2.56000000000000000e+02</item>
+								<item>2.56000000000000000e+02</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>1.28000000000000000e+02</item>
-								<item>1.28000000000000000e+02</item>
-								<item>1.28000000000000000e+02</item>
+								<item>2.56000000000000000e+02</item>
+								<item>2.56000000000000000e+02</item>
+								<item>2.56000000000000000e+02</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>7.54974720000000000e+07</item>
-								<item>1.54927104000000000e+08</item>
-								<item>1.93658880000000000e+07</item>
+								<item>1.50994944000000000e+08</item>
+								<item>3.09854208000000000e+08</item>
+								<item>3.87317760000000000e+07</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
@@ -4230,12 +4230,12 @@
 								<name>DRAM &lt;==&gt; shared_glb</name>
 							</NetworkSpecs>
 							<word_bits>
-								<t_>16</t_>
+								<t_>32</t_>
 							</word_bits>
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>7.18537198443389570e+03</t_>
+								<t_>3.00895945495895876e+03</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 							<ingress_energy></ingress_energy>
@@ -4885,7 +4885,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>7.17023064863937998e+03</t_>
+								<t_>2.97262072952250583e+03</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 							<ingress_energy></ingress_energy>
