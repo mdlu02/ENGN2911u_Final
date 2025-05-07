@@ -4,59 +4,102 @@ import yaml
 import pandas as pd
 import matplotlib.pyplot as plt
 
-with open("./example_designs/eyeriss_like/arch.yaml", "r") as f:
+os.system("rm -rf ./outputs; mkdir ./outputs")
+
+with open("./example_designs/eyeriss_like/arch_base.yaml", "r") as f:
     CONFIG = f.readlines()
 
 DATASETS = {
-    # "ConvNeXt": "ConvNeXt",
-    # "AlexNet": "CONV/AlexNet",
-    # "Resnet18": "resnet18",
+    "ConvNeXt": "ConvNeXt",
+    "AlexNet": "CONV/AlexNet",
+    "Resnet18": "resnet18",
     "ViT": "vision_transformer",
 }
 
 SIZES = {
     "5060": {"__meshX__": 10, "__meshY__": 12, "__datawidth__": 2},
     "5080": {"__meshX__": 28, "__meshY__": 12, "__datawidth__": 4},
-    "RTX Pro 6000": {"__meshX__": 64, "__meshY__": 12, "__datawidth__": 16},
+    "RTX_Pro_6000": {"__meshX__": 64, "__meshY__": 12, "__datawidth__": 16},
 }
+
 
 def parse_summary_stats(file_path):
     summary = {}
+    intensity_section = False
+    intensity_sub = None
+    summary_section = False
     computes_section = False
-    fJ_per_compute = {}
-
     with open(file_path, 'r') as f:
-        found = False
-        for line in f:
-            line = line.strip()
-
-            # Skip empty lines
-            if line.strip() == "Summary Stats":
-                found = True
-            if not line or not found:
-                continue
-
-            if line.startswith("GFLOPs"):
-                summary["GFLOPs"] = float(line.split(":")[1].strip().split()[0])
-            elif line.startswith("Utilization"):
-                summary["Utilization (%)"] = float(line.split(":")[1].strip().replace('%', ''))
-            elif line.startswith("Cycles"):
-                summary["Cycles"] = int(line.split(":")[1].strip())
-            elif line.startswith("Energy"):
-                summary["Energy (uJ)"] = float(line.split(":")[1].strip().replace('uJ', ''))
-            elif line.startswith("EDP"):
-                summary["EDP (J*cycle)"] = float(line.split(":")[1].strip())
-            elif line.startswith("Area"):
-                summary["Area (mm^2)"] = float(line.split(":")[1].strip().replace('mm^2', ''))
-            elif line.startswith("Computes ="):
-                summary["Computes"] = int(line.split("=")[1].strip())
-                computes_section = True
-            elif computes_section and '=' in line:
-                key, val = map(str.strip, line.split('='))
-                fJ_per_compute[key] = float(val)
-
-    summary["fJ/Compute"] = fJ_per_compute
+        lines = f.readlines()
+    for line in lines:
+        line = line.strip()
+        # Flags for sections
+        if line.startswith("Operational Intensity Stats"):
+            intensity_section = True
+            computes_section = False
+            summary_section = False
+            computes_sub = None
+            continue
+        if line.startswith("Summary Stats"):
+            intensity_section = False
+            intensity_sub = None
+            summary_section = True
+            computes_section = False
+            computes_sub = None
+            continue
+        if line.startswith("fJ/Compute"):
+            intensity_section = False
+            intensity_sub = None
+            summary_section = False
+            computes_section = True
+            continue
+        if not line:
+            continue
+        # Intensity section parsing
+        if intensity_section:
+            # print(line, intensity_sub, ":" in line)
+            if ":" in line and not line.startswith("===") and intensity_sub is None:
+                key, val = map(str.strip, line.split(":", 1))
+                key = key.lower().replace(" ", "_")
+                try:
+                    summary[key] = float(val)
+                except ValueError:
+                    pass
+            elif line.startswith("==="):
+                intensity_sub = line.strip("= ")
+                summary[f"{intensity_sub}_intensity"] = {}
+            elif intensity_sub is not None and ":" in line:
+                key, val = map(str.strip, line.split(":", 1))
+                try:
+                    summary[f"{intensity_sub}_intensity"][key] = float(val)
+                except ValueError:
+                    pass
+            continue
+        elif summary_section and (":" in line or "=" in line):
+            try:
+                key, val = map(str.strip, line.split(":", 1))
+            except ValueError:
+                key, val = map(str.strip, line.split("=", 1))
+            if key == "Utilization":
+                summary["Utilization (%)"] = float(val.strip().replace('%', ''))
+            elif key == "Energy":
+                parts = val.strip().split(" ")
+                summary[f"Energy ({parts[1]})"] = float(parts[0])
+            elif key == "Area":
+                parts = val.strip().split(" ")
+                summary[f"Area ({parts[1]})"] = float(parts[0])
+            try:
+                summary[key] = float(val)
+            except ValueError:
+                pass
+        elif computes_section and "=" in line:
+            key, val = map(str.strip, line.split("=", 1))
+            try:
+                summary[f"{key} fJ/compute"] = float(val)
+            except ValueError:
+                pass
     return summary
+
 
 for accelerator, s in SIZES.items():
     loaded_config = [x for x in CONFIG]
@@ -64,13 +107,14 @@ for accelerator, s in SIZES.items():
         for k, v in s.items():
             if k in loaded_config[i]:
                 loaded_config[i] = loaded_config[i].replace(k, str(v))
+    os.system("rm -f ./example_designs/eyeriss_like/arch.yaml")
     with open("./example_designs/eyeriss_like/arch.yaml", "w") as f:
         f.writelines(loaded_config)
 
     for model, model_path in DATASETS.items():
-        os.system(f"python3 run_example_designs.py --architecture eyeriss_like --problem {model_path} --n_jobs 2 --clear-outputs")
-        time.sleep(1)
-        os.system(f"python3 run_example_designs.py --architecture eyeriss_like --problem {model_path} --n_jobs 2")
+        os.system(f"python3 run_example_designs.py --architecture eyeriss_like --problem {model_path} --n_jobs 12 --clear-outputs")
+        os.system(f"python3 run_example_designs.py --architecture eyeriss_like --problem {model_path} --n_jobs 12")
+        os.system(f"cp -r ./example_designs/eyeriss_like/outputs/ ./outputs/{accelerator}_{model}/")
     
         results = []
         for d in os.listdir("example_designs/eyeriss_like/outputs"):
@@ -80,7 +124,7 @@ for accelerator, s in SIZES.items():
             results.append(layer_stats)
         
         df = pd.DataFrame(results).sort_values("layer")
-        df.to_csv(f"{accelerator}_{model}_layer_stats.csv", index=False)
+        df.to_csv(f"./outputs/{accelerator}_{model}/layer_stats.csv", index=False)
 
     with open("./example_designs/eyeriss_like/arch.yaml", "w") as f:
         f.writelines(CONFIG)

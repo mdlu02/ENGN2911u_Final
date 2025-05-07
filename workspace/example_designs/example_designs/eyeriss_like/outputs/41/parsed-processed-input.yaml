@@ -27,10 +27,10 @@ architecture:
                 meshY: 1
                 power_gated_at: null
             required_actions:
-              - write
               - read
-              - update
+              - write
               - leak
+              - update
             enabled: true
           - name: shared_glb[1..1]
             class: smartbuffer_SRAM
@@ -52,10 +52,10 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - write
               - read
-              - update
+              - write
               - leak
+              - update
             enabled: true
           - name: inter_PE_column_spatial[1..1]
             class: dummy_storage
@@ -113,10 +113,10 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - write
               - read
-              - update
+              - write
               - leak
+              - update
             enabled: true
           - name: weights_spad[1..768]
             class: smartbuffer_RF
@@ -138,10 +138,10 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - write
               - read
-              - update
+              - write
               - leak
+              - update
             enabled: true
           - name: psum_spad[1..768]
             class: smartbuffer_RF
@@ -164,10 +164,10 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - write
               - read
-              - update
+              - write
               - leak
+              - update
             enabled: true
           - name: mac[1..768]
             class: intmac
@@ -231,8 +231,8 @@ architecture_constraints:
           - Inputs
         type: bypass
         bypass:
-          - Weights
           - Outputs
+          - Weights
         target: ifmap_spad
       - permutation: GNMCPQRS
         factors: N=1,M=1,C=1,P=1,Q=1,R=1,S=1
@@ -242,8 +242,8 @@ architecture_constraints:
           - Weights
         type: bypass
         bypass:
-          - Outputs
           - Inputs
+          - Outputs
         target: weights_spad
       - permutation: GNMPQSCR
         factors: N=1,M=1,P=1,Q=1,S=1
@@ -253,8 +253,8 @@ architecture_constraints:
           - Outputs
         type: bypass
         bypass:
-          - Weights
           - Inputs
+          - Weights
         target: psum_spad
       - permutation: GNCPQRSM
         factors: N=1,C=1,R=1,S=1,P=1,Q=1
@@ -510,63 +510,26 @@ compound_components:
               - name: comparator[1..depth]
                 actions:
                   - name: compare
-      - name: intmac
-        attributes:
-            technology: "must_specify"
-            multiplier_width: "must_specify"
-            adder_width: "must_specify"
-            global_cycle_seconds: "must_specify"
-        subcomponents:
-          - name: intadder
-            class: aladdin_adder
-            attributes:
-                width: adder_width
-          - name: intmultiplier
-            class: aladdin_adder
-            attributes:
-                width_a: multiplier_width
-                width_b: multiplier_width
-        actions:
-          - name: compute
-            subcomponents:
-              - name: intadder
-                actions:
-                  - name: read
-              - name: intmultiplier
-                actions:
-                  - name: read
-          - name: leak
-            subcomponents:
-              - name: intadder
-                actions:
-                  - name: leak
-              - name: intmultiplier
-                actions:
-                  - name: leak
-      - name: smartbuffer_metadata
+      - name: regfile_metadata
         attributes:
             technology: "must_specify"
             width: "must_specify"
             depth: "must_specify"
             metadata_storage_width: "must_specify"
             metadata_storage_depth: "must_specify"
-            n_rdwr_ports: 1
             metadata_counter_width: 0
         subcomponents:
           - name: storage
-            class: smartbuffer_SRAM
+            class: smartbuffer_RF
             attributes:
-                technology: technology
                 width: width
                 depth: depth
-                n_rdwr_ports: n_rdwr_ports
           - name: metadata_storage
-            class: smartbuffer_SRAM
+            class: smartbuffer_RF
             attributes:
                 technology: technology
                 width: metadata_storage_width
                 depth: metadata_storage_depth
-                n_rdwr_ports: n_rdwr_ports
           - name: metadata_counters[0..1]
             class: intadder
             attributes:
@@ -625,26 +588,63 @@ compound_components:
               - name: metadata_counters[0]
                 actions:
                   - name: add
-      - name: regfile_metadata
+      - name: intmac
+        attributes:
+            technology: "must_specify"
+            multiplier_width: "must_specify"
+            adder_width: "must_specify"
+            global_cycle_seconds: "must_specify"
+        subcomponents:
+          - name: intadder
+            class: aladdin_adder
+            attributes:
+                width: adder_width
+          - name: intmultiplier
+            class: aladdin_adder
+            attributes:
+                width_a: multiplier_width
+                width_b: multiplier_width
+        actions:
+          - name: compute
+            subcomponents:
+              - name: intadder
+                actions:
+                  - name: read
+              - name: intmultiplier
+                actions:
+                  - name: read
+          - name: leak
+            subcomponents:
+              - name: intadder
+                actions:
+                  - name: leak
+              - name: intmultiplier
+                actions:
+                  - name: leak
+      - name: smartbuffer_metadata
         attributes:
             technology: "must_specify"
             width: "must_specify"
             depth: "must_specify"
             metadata_storage_width: "must_specify"
             metadata_storage_depth: "must_specify"
+            n_rdwr_ports: 1
             metadata_counter_width: 0
         subcomponents:
           - name: storage
-            class: smartbuffer_RF
+            class: smartbuffer_SRAM
             attributes:
+                technology: technology
                 width: width
                 depth: depth
+                n_rdwr_ports: n_rdwr_ports
           - name: metadata_storage
-            class: smartbuffer_RF
+            class: smartbuffer_SRAM
             attributes:
                 technology: technology
                 width: metadata_storage_width
                 depth: metadata_storage_depth
+                n_rdwr_ports: n_rdwr_ports
           - name: metadata_counters[0..1]
             class: intadder
             attributes:

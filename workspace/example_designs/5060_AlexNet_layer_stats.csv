@@ -1,6 +1,0 @@
-GFLOPs,Utilization (%),Cycles,Energy (uJ),EDP (J*cycle),Area (mm^2),Computes,fJ/Compute,layer
-219.7,91.67,958320,847.32,812.0,0.0,105415200,"{'mac': 262.78, 'psum_spad': 3445.51, 'weights_spad': 2707.72, 'ifmap_spad': 967.84, 'shared_glb': 119.34, 'DRAM': 534.76, 'Total': 8037.96}",AlexNet_AlexNet_layer1
-179.96,75.0,4976640,3439.34,17100.0,0.0,447897600,"{'mac': 262.78, 'psum_spad': 3503.21, 'weights_spad': 2580.14, 'ifmap_spad': 1003.08, 'shared_glb': 190.8, 'DRAM': 138.85, 'Total': 7678.86}",AlexNet_AlexNet_layer2
-191.96,80.0,1557504,1171.51,1820.0,0.0,149520384,"{'mac': 262.78, 'psum_spad': 3500.76, 'weights_spad': 2506.44, 'ifmap_spad': 1307.69, 'shared_glb': 149.69, 'DRAM': 107.78, 'Total': 7835.14}",AlexNet_AlexNet_layer3
-191.97,80.0,2336256,1984.13,4640.0,0.0,224280576,"{'mac': 262.78, 'psum_spad': 3656.65, 'weights_spad': 2674.6, 'ifmap_spad': 946.66, 'shared_glb': 64.38, 'DRAM': 1241.56, 'Total': 8846.63}",AlexNet_AlexNet_layer4
-191.97,80.0,1557504,1324.24,2060.0,0.0,149520384,"{'mac': 262.78, 'psum_spad': 3656.65, 'weights_spad': 2674.6, 'ifmap_spad': 938.55, 'shared_glb': 64.54, 'DRAM': 1259.44, 'Total': 8856.56}",AlexNet_AlexNet_layer5
