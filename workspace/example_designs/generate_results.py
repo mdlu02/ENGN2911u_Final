@@ -4,15 +4,17 @@ import yaml
 import pandas as pd
 import matplotlib.pyplot as plt
 
-os.system("rm -rf ./outputs; mkdir ./outputs")
+architecture = "eyeriss_like"
 
-with open("./example_designs/eyeriss_like/arch_base.yaml", "r") as f:
+os.system(f"rm -rf ./{architecture}_outputs; mkdir ./{architecture}_outputs")
+
+with open(f"./example_designs/{architecture}/arch_base.yaml", "r") as f:
     CONFIG = f.readlines()
 
 DATASETS = {
     "ConvNeXt": "ConvNeXt",
     "AlexNet": "CONV/AlexNet",
-    "Resnet18": "resnet18",
+    # "Resnet18": "resnet18",
     "ViT": "vision_transformer",
 }
 
@@ -20,6 +22,9 @@ SIZES = {
     "3060": {"__meshX__": 4, "__meshY__": 6, "__width__": 64, "__datawidth__": 2},
     "4090": {"__meshX__": 8, "__meshY__": 16, "__width__": 48, "__datawidth__": 8},
     "H200SXM": {"__meshX__": 11, "__meshY__": 12, "__width__": 192, "__datawidth__": 32},
+    "14x12": {"__meshX__": 14, "__meshY__": 12, "__width__": 64, "__datawidth__": 16},
+    "8x21": {"__meshX__": 8, "__meshY__": 21, "__width__": 64, "__datawidth__": 16},
+    "21x8": {"__meshX__": 21, "__meshY__": 8, "__width__": 64, "__datawidth__": 16},
 }
 
 
@@ -107,26 +112,26 @@ for accelerator, s in SIZES.items():
         for k, v in s.items():
             if k in loaded_config[i]:
                 loaded_config[i] = loaded_config[i].replace(k, str(v))
-    os.system("rm -f ./example_designs/eyeriss_like/arch.yaml")
-    with open("./example_designs/eyeriss_like/arch.yaml", "w") as f:
+    os.system(f"rm -f ./example_designs/{architecture}/arch.yaml")
+    with open(f"./example_designs/{architecture}/arch.yaml", "w") as f:
         f.writelines(loaded_config)
 
     for model, model_path in DATASETS.items():
-        os.system(f"python3 run_example_designs.py --architecture eyeriss_like --problem {model_path} --n_jobs 12 --clear-outputs")
-        os.system(f"python3 run_example_designs.py --architecture eyeriss_like --problem {model_path} --n_jobs 12")
-        os.system(f"cp -r ./example_designs/eyeriss_like/outputs/ ./outputs/{accelerator}_{model}/")
+        os.system(f"python3 run_example_designs.py --architecture {architecture} --problem {model_path} --n_jobs 16 --clear-outputs")
+        os.system(f"python3 run_example_designs.py --architecture {architecture} --problem {model_path} --n_jobs 16")
+        os.system(f"cp -r ./example_designs/{architecture}/outputs/ ./{architecture}_outputs/{accelerator}_{model}/")
     
         results = []
-        for d in os.listdir("example_designs/eyeriss_like/outputs"):
+        for d in os.listdir(f"example_designs/{architecture}/outputs"):
             layer_name = f"{model}_{d}"
-            layer_stats = parse_summary_stats(f"example_designs/eyeriss_like/outputs/{d}/timeloop-mapper.stats.txt")
+            layer_stats = parse_summary_stats(f"example_designs/{architecture}/outputs/{d}/timeloop-mapper.stats.txt")
             layer_stats["layer"] = layer_name
             results.append(layer_stats)
         
         df = pd.DataFrame(results).sort_values("layer")
-        df.to_csv(f"./outputs/{accelerator}_{model}/layer_stats.csv", index=False)
+        df.to_csv(f"./{architecture}_outputs/{accelerator}_{model}/layer_stats.csv", index=False)
 
-    with open("./example_designs/eyeriss_like/arch.yaml", "w") as f:
+    with open(f"./example_designs/{architecture}/arch.yaml", "w") as f:
         f.writelines(CONFIG)
 print("Done")
 

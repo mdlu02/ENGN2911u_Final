@@ -12,8 +12,8 @@ architecture:
     class: DRAM
     attributes:
       type: "LPDDR4"
-      width: 64
-      datawidth: 8
+      width: 192
+      datawidth: 32
 
   - !Component # Global buffer for inputs & outputs
     name: GlobalBuffer
@@ -29,7 +29,7 @@ architecture:
 
   - !Container # Each PE works on a different output channel
     name: PE
-    spatial: {meshX: 16}
+    spatial: {meshX: 11}
     constraints:
       spatial: {factors: R=1 S=1 P=1 Q=1 N=1, permutation: [M, C, R, S, P, Q, N]}
 
@@ -46,7 +46,7 @@ architecture:
 
   - !Container # Weight channels distributed across different buffers
     name: distributed_buffers
-    spatial: {meshY: 4}
+    spatial: {meshY: 12}
     constraints:
       spatial: {factors: P=1 Q=1 R=1 S=1 C=1 N=1, permutation: [M, C, Q, R, S, P, N]}
 

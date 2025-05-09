@@ -5,8 +5,8 @@ architecture:
         class: DRAM
         attributes:
             type: "LPDDR4"
-            width: 192
-            datawidth: 32
+            width: 64
+            datawidth: 16
             has_power_gating: false
             n_banks: 2
             cluster_size: 1
@@ -24,10 +24,10 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - write
-          - update
           - read
+          - update
           - leak
+          - write
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0
@@ -57,10 +57,10 @@ architecture:
             n_instances: 1
             n_rw_ports: 1
         required_actions:
-          - write
-          - update
           - read
+          - update
           - leak
+          - write
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0
@@ -89,7 +89,7 @@ architecture:
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0
-      - name: system_top_level.inter_PE_spatial[1..11]
+      - name: system_top_level.inter_PE_spatial[1..14]
         class: dummy_storage
         attributes:
             width: 1
@@ -103,7 +103,7 @@ architecture:
             multiple_buffering: 1
             min_utilization: 0
             allow_overbooking: false
-            meshX: 11
+            meshX: 14
             meshY: 1
             power_gated_at: null
             version: '0.4'
@@ -114,7 +114,7 @@ architecture:
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0
-      - name: system_top_level.ifmap_spad[1..132]
+      - name: system_top_level.ifmap_spad[1..168]
         class: smartbuffer_RF
         attributes:
             depth: 12
@@ -129,7 +129,7 @@ architecture:
             multiple_buffering: 1
             min_utilization: 0
             allow_overbooking: false
-            meshX: 11
+            meshX: 14
             meshY: 12
             power_gated_at: null
             technology: "32nm"
@@ -148,14 +148,14 @@ architecture:
             static_energy_scale: 0.09375
             n_rdwr_ports: 1
         required_actions:
-          - write
-          - update
           - read
+          - update
           - leak
+          - write
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0
-      - name: system_top_level.weights_spad[1..132]
+      - name: system_top_level.weights_spad[1..168]
         class: smartbuffer_RF
         attributes:
             depth: 192
@@ -170,7 +170,7 @@ architecture:
             multiple_buffering: 1
             min_utilization: 0
             allow_overbooking: false
-            meshX: 11
+            meshX: 14
             meshY: 12
             power_gated_at: null
             technology: "32nm"
@@ -189,14 +189,14 @@ architecture:
             static_energy_scale: 0.5
             n_rdwr_ports: 1
         required_actions:
-          - write
-          - update
           - read
+          - update
           - leak
+          - write
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0
-      - name: system_top_level.psum_spad[1..132]
+      - name: system_top_level.psum_spad[1..168]
         class: smartbuffer_RF
         attributes:
             depth: 16
@@ -212,7 +212,7 @@ architecture:
             multiple_buffering: 1
             min_utilization: 0
             allow_overbooking: false
-            meshX: 11
+            meshX: 14
             meshY: 12
             power_gated_at: null
             technology: "32nm"
@@ -231,20 +231,20 @@ architecture:
             static_energy_scale: 0.125
             n_rdwr_ports: 1
         required_actions:
-          - write
-          - update
           - read
+          - update
           - leak
+          - write
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0
-      - name: system_top_level.mac[1..132]
+      - name: system_top_level.mac[1..168]
         class: intmac
         attributes:
             multiplier_width: 8
             adder_width: 16
             has_power_gating: false
-            meshX: 11
+            meshX: 14
             meshY: 12
             power_gated_at: null
             technology: "32nm"
