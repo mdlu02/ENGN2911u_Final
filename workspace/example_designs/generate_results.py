@@ -14,14 +14,15 @@ with open(f"./example_designs/{architecture}/arch_base.yaml", "r") as f:
 DATASETS = {
     "ConvNeXt": "ConvNeXt",
     "AlexNet": "CONV/AlexNet",
-    # "Resnet18": "resnet18",
+    "Resnet18": "resnet18",
     "ViT": "vision_transformer",
 }
 
 SIZES = {
-    "3060": {"__meshX__": 4, "__meshY__": 6, "__width__": 64, "__datawidth__": 2},
-    "4090": {"__meshX__": 8, "__meshY__": 16, "__width__": 48, "__datawidth__": 8},
-    "H200SXM": {"__meshX__": 11, "__meshY__": 12, "__width__": 192, "__datawidth__": 32},
+    "V100TensorCore": {"__meshX__": 8, "__meshY__": 16, "__width__": 64, "__datawidth__": 64},
+    "A100TensorCore": {"__meshX__": 16, "__meshY__": 32, "__width__": 160, "__datawidth__": 32},
+    "3060TensorCore": {"__meshX__": 16, "__meshY__": 32, "__width__": 24, "__datawidth__": 8},
+    "3090TensorCore": {"__meshX__": 16, "__meshY__": 32, "__width__": 48, "__datawidth__": 8},
     "14x12": {"__meshX__": 14, "__meshY__": 12, "__width__": 64, "__datawidth__": 16},
     "8x21": {"__meshX__": 8, "__meshY__": 21, "__width__": 64, "__datawidth__": 16},
     "21x8": {"__meshX__": 21, "__meshY__": 8, "__width__": 64, "__datawidth__": 16},
