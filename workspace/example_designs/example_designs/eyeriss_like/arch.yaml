@@ -12,8 +12,8 @@ architecture:
     class: DRAM
     attributes:
       type: "LPDDR4"
-      width: 160
-      datawidth: 32
+      width: __width__
+      datawidth: __datawidth__
 
   - !Container # Eyeriss accelerator
     name: eyeriss
@@ -35,7 +35,7 @@ architecture:
 
   - !Container # Each column of PEs produces a different psum row
     name: PE_column
-    spatial: {meshX: 16}
+    spatial: {meshX: __meshX__}
     constraints:
       spatial:
         permutation: [N, C, P, R, S, Q, M]
@@ -44,7 +44,7 @@ architecture:
 
   - !Container # Each PE in the column receives a different filter row
     name: PE
-    spatial: {meshY: 32}
+    spatial: {meshY: __meshY__}
     constraints:
       spatial:
         split: 4

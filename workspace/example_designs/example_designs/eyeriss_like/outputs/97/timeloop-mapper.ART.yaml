@@ -5,15 +5,15 @@ ART:
         area: 0.0
       - name: system_top_level.inter_PE_column_spatial[1..1]
         area: 1.0
-      - name: system_top_level.inter_PE_spatial[1..16]
+      - name: system_top_level.inter_PE_spatial[1..21]
         area: 1.0
       - name: system_top_level.shared_glb[1..1]
         area: 217363.0
-      - name: system_top_level.ifmap_spad[1..512]
+      - name: system_top_level.ifmap_spad[1..168]
         area: 13327.2
-      - name: system_top_level.weights_spad[1..512]
+      - name: system_top_level.weights_spad[1..168]
         area: 39958.1
-      - name: system_top_level.psum_spad[1..512]
+      - name: system_top_level.psum_spad[1..168]
         area: 13327.2
-      - name: system_top_level.mac[1..512]
+      - name: system_top_level.mac[1..168]
         area: 330.392
