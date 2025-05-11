@@ -4,7 +4,7 @@ import yaml
 import pandas as pd
 import matplotlib.pyplot as plt
 
-architecture = "eyeriss_like"
+architecture = "simple_output_stationary"
 
 os.system(f"rm -rf ./{architecture}_outputs; mkdir ./{architecture}_outputs")
 
@@ -118,8 +118,8 @@ for accelerator, s in SIZES.items():
         f.writelines(loaded_config)
 
     for model, model_path in DATASETS.items():
-        os.system(f"python3 run_example_designs.py --architecture {architecture} --problem {model_path} --n_jobs 16 --clear-outputs")
-        os.system(f"python3 run_example_designs.py --architecture {architecture} --problem {model_path} --n_jobs 16")
+        os.system(f"python3 run_example_designs.py --architecture {architecture} --problem {model_path} --n_jobs 12 --clear-outputs")
+        os.system(f"python3 run_example_designs.py --architecture {architecture} --problem {model_path} --n_jobs 12")
         os.system(f"cp -r ./example_designs/{architecture}/outputs/ ./{architecture}_outputs/{accelerator}_{model}/")
     
         results = []
