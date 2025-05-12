@@ -7,3 +7,5 @@ workspace/example_designs/make_layer_shapes.ipynb contains a some code that allo
 workspace/example_designs/analysis.ipynb contains code that we used to calculate summary statistics of our simulations and generate associated roof line plots of our data. This notebook can be used to visualize any Timeloop output.
 
 workspace/example_designs/generate_results.py is a script for running a set of Timeloop parameter configs on a given accelerator design. The script handles configuring associated Timeloop .yaml files, running them, parsing the output text files into .csv files, and saving them to an appropriate location to avoid overwriting.
+
+Fibertree animations and simplified examples of PE grid tiling benefits included in Fibertree.ipynb.git
