@@ -242,8 +242,8 @@ architecture_constraints:
           - Weights
         type: bypass
         bypass:
-          - Outputs
           - Inputs
+          - Outputs
         target: weights_spad
       - permutation: GNMPQSCR
         factors: N=1,M=1,P=1,Q=1,S=1

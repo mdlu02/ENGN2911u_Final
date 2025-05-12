@@ -325,8 +325,8 @@ Level 7
     -----
         Technology                      : DRAM
         Size                            : -
-        Word bits                       : 8
-        Block size                      : 6
+        Word bits                       : 16
+        Block size                      : 24
         Cluster size                    : 1
         Instances                       : 1 (1*1)
         Shared bandwidth                : -
@@ -335,7 +335,7 @@ Level 7
         Multiple buffering              : 1.00
         Effective size                  : -
         Min utilization                 : 0.00
-        Vector access energy            : 384.00 pJ
+        Vector access energy            : 3072.00 pJ
         Vector access energy source     : ERT
         Per-instance-cycle leakage      : 0.00 pJ
         Instances sharing power gating  : 1.00
@@ -357,9 +357,9 @@ Level 7
         Scalar updates (per-instance)            : 0
         Temporal reductions (per-instance)       : 0
         Address generations (per-cluster)        : 768000
-        Energy (per-scalar-access)               : 64.00 pJ
-        Energy (per-instance)                    : 49152000.00 pJ
-        Energy (total)                           : 49152000.00 pJ
+        Energy (per-scalar-access)               : 128.00 pJ
+        Energy (per-instance)                    : 98304000.00 pJ
+        Energy (total)                           : 98304000.00 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -381,9 +381,9 @@ Level 7
         Scalar updates (per-instance)            : 0
         Temporal reductions (per-instance)       : 0
         Address generations (per-cluster)        : 768
-        Energy (per-scalar-access)               : 64.00 pJ
-        Energy (per-instance)                    : 49152.00 pJ
-        Energy (total)                           : 49152.00 pJ
+        Energy (per-scalar-access)               : 128.00 pJ
+        Energy (per-instance)                    : 98304.00 pJ
+        Energy (total)                           : 98304.00 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -405,9 +405,9 @@ Level 7
         Scalar updates (per-instance)            : 1000
         Temporal reductions (per-instance)       : 0
         Address generations (per-cluster)        : 1000
-        Energy (per-scalar-access)               : 64.13 pJ
-        Energy (per-instance)                    : 64128.00 pJ
-        Energy (total)                           : 64128.00 pJ
+        Energy (per-scalar-access)               : 129.02 pJ
+        Energy (per-instance)                    : 129024.00 pJ
+        Energy (total)                           : 129024.00 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -429,7 +429,7 @@ Operational Intensity Stats
     Total reduction ops                     : 767000
     Total ops                               : 1535000
     Total memory accesses required          : 769768
-    Optimal Op per Byte                     : 1.99
+    Optimal Op per Byte                     : 1.00
 
 === output_activation_reg ===
     Total scalar accesses                   : 1540000
@@ -449,7 +449,7 @@ Operational Intensity Stats
     Op per Byte                             : 7.54
 === DRAM ===
     Total scalar accesses                   : 769768
-    Op per Byte                             : 1.99
+    Op per Byte                             : 1.00
 
 
 Summary Stats
@@ -457,8 +457,8 @@ Summary Stats
 GFLOPs (@1GHz): 63.96
 Utilization: 6.25%
 Cycles: 24000
-Energy: 50.84 uJ
-EDP(J*cycle): 1.22e+00
+Energy: 100.11 uJ
+EDP(J*cycle): 2.40e+00
 Area: 0.00 mm^2
 
 Computes = 768000
@@ -469,6 +469,6 @@ fJ/Compute
     weight_reg                                      = 182.19
     pe_spad                                         = 47.59
     shared_glb                                      = 1063.90
-    DRAM                                            = 64147.50
-    Total                                           = 66203.18
+    DRAM                                            = 128296.00
+    Total                                           = 130351.68
 

@@ -3682,13 +3682,13 @@
 						</technology>
 						<size></size>
 						<word_bits>
-							<t_>64</t_>
+							<t_>16</t_>
 						</word_bits>
 						<addr_gen_bits>
-							<t_>19</t_>
+							<t_>11</t_>
 						</addr_gen_bits>
 						<block_size>
-							<t_>1</t_>
+							<t_>256</t_>
 						</block_size>
 						<cluster_size>
 							<t_>1</t_>
@@ -4169,27 +4169,27 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>5.12000000000000000e+02</item>
-								<item>5.12000000000000000e+02</item>
-								<item>5.12000000000000000e+02</item>
+								<item>1.28000000000000000e+02</item>
+								<item>1.28000000000000000e+02</item>
+								<item>1.28000000000000000e+02</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>5.12000000000000000e+02</item>
-								<item>5.12000000000000000e+02</item>
-								<item>5.12000000000000000e+02</item>
+								<item>1.28000000000000000e+02</item>
+								<item>1.28000000000000000e+02</item>
+								<item>1.28000000000000000e+02</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>1.07374182400000000e+09</item>
-								<item>1.34217728000000000e+08</item>
-								<item>1.02760448000000000e+08</item>
+								<item>2.68435456000000000e+08</item>
+								<item>3.35544320000000000e+07</item>
+								<item>2.56901120000000000e+07</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
@@ -4258,7 +4258,7 @@
 								<name>DRAM &lt;==&gt; shared_glb</name>
 							</NetworkSpecs>
 							<word_bits>
-								<t_>64</t_>
+								<t_>16</t_>
 							</word_bits>
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>

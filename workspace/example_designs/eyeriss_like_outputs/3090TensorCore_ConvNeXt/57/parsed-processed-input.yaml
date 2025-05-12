@@ -14,8 +14,8 @@ architecture:
             class: DRAM
             attributes:
                 type: "LPDDR4"
-                width: 48
-                datawidth: 8
+                width: 384
+                datawidth: 16
                 has_power_gating: false
                 n_banks: 2
                 cluster_size: 1
@@ -27,9 +27,9 @@ architecture:
                 meshY: 1
                 power_gated_at: null
             required_actions:
-              - leak
               - read
               - write
+              - leak
               - update
             enabled: true
           - name: shared_glb[1..1]
@@ -52,9 +52,9 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - leak
               - read
               - write
+              - leak
               - update
             enabled: true
           - name: inter_PE_column_spatial[1..1]
@@ -113,9 +113,9 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - leak
               - read
               - write
+              - leak
               - update
             enabled: true
           - name: weights_spad[1..512]
@@ -138,9 +138,9 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - leak
               - read
               - write
+              - leak
               - update
             enabled: true
           - name: psum_spad[1..512]
@@ -164,9 +164,9 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - leak
               - read
               - write
+              - leak
               - update
             enabled: true
           - name: mac[1..512]

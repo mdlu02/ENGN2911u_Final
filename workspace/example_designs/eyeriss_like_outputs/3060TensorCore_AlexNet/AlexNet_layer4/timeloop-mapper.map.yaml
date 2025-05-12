@@ -53,11 +53,11 @@ mapping:
       []
   - target: psum_spad
     type: temporal
-    factors: C1 M3 R1 S1 N1 P1 Q1
+    factors: C1 M8 R1 S1 N1 P1 Q1
     permutation: MCRSNPQ
   - target: weights_spad
     type: temporal
-    factors: C8 M1 R1 S1 N1 P1 Q1
+    factors: C4 M1 R1 S1 N1 P1 Q1
     permutation: CMRSNPQ
   - target: ifmap_spad
     type: temporal
@@ -65,7 +65,7 @@ mapping:
     permutation: CMRSNPQ
   - target: inter_PE_spatial
     type: spatial
-    factors: C6 M4 R1 S1 N1 P1 Q1
+    factors: C4 M8 R1 S1 N1 P1 Q1
     permutation: CMRSNPQ
     split: 0
   - target: inter_PE_spatial
@@ -74,8 +74,8 @@ mapping:
     permutation: CMRSNPQ
   - target: inter_PE_column_spatial
     type: spatial
-    factors: C1 M16 R1 S1 N1 P1 Q1
-    permutation: MCRSNPQ
+    factors: C1 M1 R1 S1 N1 P1 Q13
+    permutation: QCMRSNP
     split: 1
   - target: inter_PE_column_spatial
     type: temporal
@@ -83,9 +83,9 @@ mapping:
     permutation: CMRSNPQ
   - target: shared_glb
     type: temporal
-    factors: C4 M1 R1 S1 N1 P1 Q13
-    permutation: QCMRSNP
+    factors: C6 M1 R1 S1 N1 P13 Q1
+    permutation: PCMRSNQ
   - target: DRAM
     type: temporal
-    factors: C2 M2 R3 S3 N1 P13 Q1
-    permutation: RPSCMNQ
+    factors: C4 M6 R3 S3 N1 P1 Q1
+    permutation: RCMSNPQ

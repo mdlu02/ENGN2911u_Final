@@ -3621,13 +3621,13 @@
 						</technology>
 						<size></size>
 						<word_bits>
-							<t_>8</t_>
+							<t_>16</t_>
 						</word_bits>
 						<addr_gen_bits>
-							<t_>10</t_>
+							<t_>8</t_>
 						</addr_gen_bits>
 						<block_size>
-							<t_>6</t_>
+							<t_>24</t_>
 						</block_size>
 						<cluster_size>
 							<t_>1</t_>
@@ -4108,27 +4108,27 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>6.40408163265306172e+01</item>
-								<item>6.85714285714285694e+01</item>
-								<item>6.85714285714285694e+01</item>
+								<item>1.28326530612244909e+02</item>
+								<item>1.64571428571428584e+02</item>
+								<item>1.64571428571428584e+02</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>6.40408163265306172e+01</item>
-								<item>6.85714285714285694e+01</item>
-								<item>6.85714285714285694e+01</item>
+								<item>1.28326530612244909e+02</item>
+								<item>1.64571428571428584e+02</item>
+								<item>1.64571428571428584e+02</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>2.00832000000000000e+05</item>
-								<item>3.84000000000000000e+03</item>
-								<item>3.84000000000000000e+03</item>
+								<item>4.02432000000000000e+05</item>
+								<item>9.21600000000000000e+03</item>
+								<item>9.21600000000000000e+03</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
@@ -4197,7 +4197,7 @@
 								<name>DRAM &lt;==&gt; shared_glb</name>
 							</NetworkSpecs>
 							<word_bits>
-								<t_>8</t_>
+								<t_>16</t_>
 							</word_bits>
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>

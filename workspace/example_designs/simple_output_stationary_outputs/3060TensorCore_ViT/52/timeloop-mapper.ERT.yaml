@@ -3,6 +3,11 @@ ERT:
     tables:
       - name: system_top_level.DRAM[1..1]
         actions:
+          - name: update
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 1536.0
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
@@ -12,19 +17,19 @@ ERT:
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-            energy: 192.0
-          - name: update
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 192.0
+            energy: 1536.0
           - name: write
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-            energy: 192.0
+            energy: 1536.0
       - name: system_top_level.weight_reg[1..512]
         actions:
+          - name: update
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
@@ -35,11 +40,6 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.182195
-          - name: update
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 0.0
           - name: write
             arguments:
                 global_cycle_seconds: 1e-09
@@ -47,6 +47,11 @@ ERT:
             energy: 0.0
       - name: system_top_level.input_activation_reg[1..512]
         actions:
+          - name: update
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
@@ -57,11 +62,6 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.182195
-          - name: update
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 0.0
           - name: write
             arguments:
                 global_cycle_seconds: 1e-09
@@ -69,6 +69,11 @@ ERT:
             energy: 0.0
       - name: system_top_level.output_activation_reg[1..512]
         actions:
+          - name: update
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
@@ -79,11 +84,6 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.182195
-          - name: update
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 0.0
           - name: write
             arguments:
                 global_cycle_seconds: 1e-09

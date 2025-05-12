@@ -6,11 +6,11 @@ ERT_summary:
           - name: leak
             energy: 0.0
           - name: update
-            energy: 384.0
-          - name: write
-            energy: 384.0
+            energy: 3072.0
           - name: read
-            energy: 384.0
+            energy: 3072.0
+          - name: write
+            energy: 3072.0
         primitive_estimation(s):
           - name: system_top_level.DRAM[1..1]
             estimator: CactiDRAM
@@ -20,10 +20,10 @@ ERT_summary:
             energy: 0.0
           - name: update
             energy: 0.0
-          - name: write
-            energy: 0.0
           - name: read
             energy: 0.182195
+          - name: write
+            energy: 0.0
         primitive_estimation(s):
           - name: system_top_level.weight_reg[1..512]
             estimator: Library
@@ -33,10 +33,10 @@ ERT_summary:
             energy: 0.0
           - name: update
             energy: 0.0
-          - name: write
-            energy: 0.0
           - name: read
             energy: 0.182195
+          - name: write
+            energy: 0.0
         primitive_estimation(s):
           - name: system_top_level.input_activation_reg[1..512]
             estimator: Library
@@ -46,10 +46,10 @@ ERT_summary:
             energy: 0.0
           - name: update
             energy: 0.0
-          - name: write
-            energy: 0.0
           - name: read
             energy: 0.182195
+          - name: write
+            energy: 0.0
         primitive_estimation(s):
           - name: system_top_level.output_activation_reg[1..512]
             estimator: Library

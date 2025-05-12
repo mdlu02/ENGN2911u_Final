@@ -5,8 +5,8 @@ architecture:
         class: DRAM
         attributes:
             type: "LPDDR4"
-            width: 24
-            datawidth: 8
+            width: 192
+            datawidth: 16
             has_power_gating: false
             n_banks: 2
             cluster_size: 1

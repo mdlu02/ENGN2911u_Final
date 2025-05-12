@@ -1,23 +1,9 @@
-# Overview
-Welcome to `timeloop-accelergy-exercises`! This repository contains tutorials,
-exercises, and examples to get you started with Timeloop and Accelergy. In this
-directory, you'll find the following.
+Public Github Repo: https://github.com/mdlu02/ENGN2911u_Final
 
-#### `tutorial_exercises`
-This directory contains exercises and tutorials to teach you how to use
-Timeloop. Note that exercises 1 and 2 are prerequisites for the rest of the
-exercises, and should be completed first.
+All modified/added code is found in workspace/example_designs
 
-#### `cheatsheets`
-This directory contains YAML syntax examples and explanations for YAML syntax
-and parsing, as well as some of the Timeloop input files. They're meant to be
-used as a quick reference when writing your own input files.
+workspace/example_designs/make_layer_shapes.ipynb contains a some code that allows for automatic parsing of MLP/CNN-based models found within Pytorch. While the code can also be applied to Transformer based models, there are differences in how our script parses attention heads compared to the ViT example that was given to us.
 
-#### `example_designs`
-This directory contains example Timeloop accelerator designs that can be used
-and/or adapted to run your own experiments.
+workspace/example_designs/analysis.ipynb contains code that we used to calculate summary statistics of our simulations and generate associated roof line plots of our data. This notebook can be used to visualize any Timeloop output.
 
-#### `timeloop_spec.yaml`
-This file contains a full specification of the Timeloop input file format,
-including all allowed fields and their types. Use this as a reference when
-writing your own Timeloop input files.
+workspace/example_designs/generate_results.py is a script for running a set of Timeloop parameter configs on a given accelerator design. The script handles configuring associated Timeloop .yaml files, running them, parsing the output text files into .csv files, and saving them to an appropriate location to avoid overwriting.

@@ -3633,13 +3633,13 @@
 						</technology>
 						<size></size>
 						<word_bits>
-							<t_>8</t_>
+							<t_>16</t_>
 						</word_bits>
 						<addr_gen_bits>
-							<t_>7</t_>
+							<t_>5</t_>
 						</addr_gen_bits>
 						<block_size>
-							<t_>3</t_>
+							<t_>12</t_>
 						</block_size>
 						<cluster_size>
 							<t_>1</t_>
@@ -4120,27 +4120,27 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>6.46530612244897895e+01</item>
-								<item>6.85714285714285694e+01</item>
-								<item>6.85714285714285694e+01</item>
+								<item>1.33224489795918373e+02</item>
+								<item>2.19428571428571416e+02</item>
+								<item>2.19428571428571416e+02</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>6.46530612244897895e+01</item>
-								<item>6.85714285714285694e+01</item>
-								<item>6.85714285714285694e+01</item>
+								<item>1.33224489795918373e+02</item>
+								<item>2.19428571428571416e+02</item>
+								<item>2.19428571428571416e+02</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>1.26720000000000000e+04</item>
-								<item>9.60000000000000000e+02</item>
-								<item>9.60000000000000000e+02</item>
+								<item>2.61120000000000000e+04</item>
+								<item>3.07200000000000000e+03</item>
+								<item>3.07200000000000000e+03</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
@@ -4209,7 +4209,7 @@
 								<name>DRAM &lt;==&gt; shared_glb</name>
 							</NetworkSpecs>
 							<word_bits>
-								<t_>8</t_>
+								<t_>16</t_>
 							</word_bits>
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>

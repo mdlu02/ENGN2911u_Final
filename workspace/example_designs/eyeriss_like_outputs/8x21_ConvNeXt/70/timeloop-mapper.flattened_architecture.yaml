@@ -26,8 +26,8 @@ architecture:
         required_actions:
           - read
           - write
-          - update
           - leak
+          - update
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0
@@ -59,8 +59,8 @@ architecture:
         required_actions:
           - read
           - write
-          - update
           - leak
+          - update
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0
@@ -150,8 +150,8 @@ architecture:
         required_actions:
           - read
           - write
-          - update
           - leak
+          - update
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0
@@ -191,8 +191,8 @@ architecture:
         required_actions:
           - read
           - write
-          - update
           - leak
+          - update
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0
@@ -233,8 +233,8 @@ architecture:
         required_actions:
           - read
           - write
-          - update
           - leak
+          - update
         enabled: true
         area_scale: 1.0
         energy_scale: 1.0

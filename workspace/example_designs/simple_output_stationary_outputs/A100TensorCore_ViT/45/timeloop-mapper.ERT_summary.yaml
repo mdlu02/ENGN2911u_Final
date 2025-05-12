@@ -3,52 +3,52 @@ ERT_summary:
     table_summary:
       - name: system_top_level.DRAM[1..1]
         actions:
-          - name: write
-            energy: 1280.0
           - name: read
-            energy: 1280.0
+            energy: 40960.0
           - name: leak
             energy: 0.0
           - name: update
-            energy: 1280.0
+            energy: 40960.0
+          - name: write
+            energy: 40960.0
         primitive_estimation(s):
           - name: system_top_level.DRAM[1..1]
             estimator: CactiDRAM
       - name: system_top_level.weight_reg[1..512]
         actions:
-          - name: write
-            energy: 0.0
           - name: read
             energy: 0.182195
           - name: leak
             energy: 0.0
           - name: update
+            energy: 0.0
+          - name: write
             energy: 0.0
         primitive_estimation(s):
           - name: system_top_level.weight_reg[1..512]
             estimator: Library
       - name: system_top_level.input_activation_reg[1..512]
         actions:
-          - name: write
-            energy: 0.0
           - name: read
             energy: 0.182195
           - name: leak
             energy: 0.0
           - name: update
+            energy: 0.0
+          - name: write
             energy: 0.0
         primitive_estimation(s):
           - name: system_top_level.input_activation_reg[1..512]
             estimator: Library
       - name: system_top_level.output_activation_reg[1..512]
         actions:
-          - name: write
-            energy: 0.0
           - name: read
             energy: 0.182195
           - name: leak
             energy: 0.0
           - name: update
+            energy: 0.0
+          - name: write
             energy: 0.0
         primitive_estimation(s):
           - name: system_top_level.output_activation_reg[1..512]
