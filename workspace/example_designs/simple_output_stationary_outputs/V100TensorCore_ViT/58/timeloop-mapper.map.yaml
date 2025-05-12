@@ -39,10 +39,9 @@ mapping:
     type: datatype
     keep:
       - Weights
+    bypass:
       - Inputs
       - Outputs
-    bypass:
-      []
   - target: DRAM
     type: datatype
     keep:
@@ -65,11 +64,11 @@ mapping:
     permutation: CMRSNPQG
   - target: pe_spad
     type: temporal
-    factors: C4 M32 R1 S1 N1 P1 Q1 G1
+    factors: C192 M16 R1 S1 N1 P1 Q1 G1
     permutation: MCRSNPQG
   - target: inter_PE_spatial
     type: spatial
-    factors: C8 M2 R1 S1 N1 P1 Q1 G1
+    factors: C4 M4 R1 S1 N1 P1 Q1 G1
     permutation: CMRSNPQG
     split: 0
   - target: inter_PE_spatial
@@ -78,9 +77,9 @@ mapping:
     permutation: CMRSNPQG
   - target: shared_glb
     type: temporal
-    factors: C1 M3 R1 S1 N1 P197 Q1 G1
-    permutation: MPCRSNQG
+    factors: C1 M1 R1 S1 N1 P197 Q1 G1
+    permutation: PCMRSNQG
   - target: DRAM
     type: temporal
-    factors: C24 M4 R1 S1 N1 P1 Q1 G1
-    permutation: CMRSNPQG
+    factors: C1 M12 R1 S1 N1 P1 Q1 G1
+    permutation: MCRSNPQG

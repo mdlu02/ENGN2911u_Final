@@ -14,8 +14,8 @@ architecture:
             class: DRAM
             attributes:
                 type: "LPDDR4"
-                width: 48
-                datawidth: 8
+                width: 384
+                datawidth: 16
                 has_power_gating: false
                 n_banks: 2
                 cluster_size: 1
@@ -231,8 +231,8 @@ architecture_constraints:
           - Inputs
         type: bypass
         bypass:
-          - Weights
           - Outputs
+          - Weights
         target: ifmap_spad
       - permutation: GNMCPQRS
         factors: N=1,M=1,C=1,P=1,Q=1,R=1,S=1
@@ -242,8 +242,8 @@ architecture_constraints:
           - Weights
         type: bypass
         bypass:
-          - Inputs
           - Outputs
+          - Inputs
         target: weights_spad
       - permutation: GNMPQSCR
         factors: N=1,M=1,P=1,Q=1,S=1

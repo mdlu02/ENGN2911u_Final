@@ -3621,13 +3621,13 @@
 						</technology>
 						<size></size>
 						<word_bits>
-							<t_>32</t_>
+							<t_>16</t_>
 						</word_bits>
 						<addr_gen_bits>
-							<t_>12</t_>
+							<t_>6</t_>
 						</addr_gen_bits>
 						<block_size>
-							<t_>5</t_>
+							<t_>320</t_>
 						</block_size>
 						<cluster_size>
 							<t_>1</t_>
@@ -4108,27 +4108,27 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>2.56040609137055810e+02</item>
-								<item>2.56108291032148884e+02</item>
-								<item>2.56666666666666686e+02</item>
+								<item>1.29949238578680195e+02</item>
+								<item>1.38612521150592215e+02</item>
+								<item>1.60000000000000000e+02</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>2.56040609137055810e+02</item>
-								<item>2.56108291032148884e+02</item>
-								<item>2.56666666666666686e+02</item>
+								<item>1.29949238578680195e+02</item>
+								<item>1.38612521150592215e+02</item>
+								<item>1.60000000000000000e+02</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>3.22816000000000000e+06</item>
-								<item>6.05440000000000000e+05</item>
-								<item>1.97120000000000000e+05</item>
+								<item>1.63840000000000000e+06</item>
+								<item>3.27680000000000000e+05</item>
+								<item>1.22880000000000000e+05</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
@@ -4197,7 +4197,7 @@
 								<name>DRAM &lt;==&gt; shared_glb</name>
 							</NetworkSpecs>
 							<word_bits>
-								<t_>32</t_>
+								<t_>16</t_>
 							</word_bits>
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>

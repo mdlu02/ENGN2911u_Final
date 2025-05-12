@@ -14,8 +14,8 @@ architecture:
             class: DRAM
             attributes:
                 type: "LPDDR4"
-                width: 160
-                datawidth: 32
+                width: 5120
+                datawidth: 16
                 has_power_gating: false
                 n_banks: 2
                 cluster_size: 1
@@ -27,8 +27,8 @@ architecture:
                 meshY: 1
                 power_gated_at: null
             required_actions:
-              - write
               - update
+              - write
               - leak
               - read
             enabled: true
@@ -52,8 +52,8 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - write
               - update
+              - write
               - leak
               - read
             enabled: true
@@ -113,8 +113,8 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - write
               - update
+              - write
               - leak
               - read
             enabled: true
@@ -138,8 +138,8 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - write
               - update
+              - write
               - leak
               - read
             enabled: true
@@ -164,8 +164,8 @@ architecture:
                 power_gated_at: null
                 technology: "32nm"
             required_actions:
-              - write
               - update
+              - write
               - leak
               - read
             enabled: true
@@ -242,8 +242,8 @@ architecture_constraints:
           - Weights
         type: bypass
         bypass:
-          - Inputs
           - Outputs
+          - Inputs
         target: weights_spad
       - permutation: NMPQSCR
         factors: N=1,M=1,P=1,Q=1,S=1

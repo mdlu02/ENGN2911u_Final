@@ -19,10 +19,10 @@ DATASETS = {
 }
 
 SIZES = {
-    "V100TensorCore": {"__meshX__": 8, "__meshY__": 16, "__width__": 64, "__datawidth__": 64},
-    "A100TensorCore": {"__meshX__": 16, "__meshY__": 32, "__width__": 160, "__datawidth__": 32},
-    "3060TensorCore": {"__meshX__": 16, "__meshY__": 32, "__width__": 24, "__datawidth__": 8},
-    "3090TensorCore": {"__meshX__": 16, "__meshY__": 32, "__width__": 48, "__datawidth__": 8},
+    "V100TensorCore": {"__meshX__": 8, "__meshY__": 16, "__width__": 4096, "__datawidth__": 16},
+    "A100TensorCore": {"__meshX__": 16, "__meshY__": 32, "__width__": 5120, "__datawidth__": 16},
+    "3060TensorCore": {"__meshX__": 16, "__meshY__": 32, "__width__": 192, "__datawidth__": 16},
+    "3090TensorCore": {"__meshX__": 16, "__meshY__": 32, "__width__": 384, "__datawidth__": 16},
     "14x12": {"__meshX__": 14, "__meshY__": 12, "__width__": 64, "__datawidth__": 16},
     "8x21": {"__meshX__": 8, "__meshY__": 21, "__width__": 64, "__datawidth__": 16},
     "21x8": {"__meshX__": 21, "__meshY__": 8, "__width__": 64, "__datawidth__": 16},
@@ -113,7 +113,7 @@ for accelerator, s in SIZES.items():
         for k, v in s.items():
             if k in loaded_config[i]:
                 loaded_config[i] = loaded_config[i].replace(k, str(v))
-    os.system(f"rm -f ./example_designs/{architecture}/arch.yaml")
+    # os.system(f"rm -f ./example_designs/{architecture}/arch.yaml")
     with open(f"./example_designs/{architecture}/arch.yaml", "w") as f:
         f.writelines(loaded_config)
 

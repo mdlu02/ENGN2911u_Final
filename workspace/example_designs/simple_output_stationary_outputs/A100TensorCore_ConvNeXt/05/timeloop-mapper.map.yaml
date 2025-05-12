@@ -65,11 +65,11 @@ mapping:
     permutation: CMRSNPQG
   - target: pe_spad
     type: temporal
-    factors: C1 M7 R1 S1 N1 P1 Q1 G1
+    factors: C7 M7 R1 S1 N1 P1 Q1 G1
     permutation: MCRSNPQG
   - target: inter_PE_spatial
     type: spatial
-    factors: C4 M8 R1 S1 N1 P1 Q1 G1
+    factors: C8 M4 R1 S1 N1 P1 Q1 G1
     permutation: CMRSNPQG
     split: 0
   - target: inter_PE_spatial
@@ -78,9 +78,9 @@ mapping:
     permutation: CMRSNPQG
   - target: shared_glb
     type: temporal
-    factors: C2 M1 R1 S1 N1 P1 Q1 G1
-    permutation: CMRSNPQG
+    factors: C1 M2 R1 S1 N1 P1 Q1 G1
+    permutation: MCRSNPQG
   - target: DRAM
     type: temporal
-    factors: C7 M1 R1 S1 N1 P1 Q1 G1
+    factors: C1 M1 R1 S1 N1 P1 Q1 G1
     permutation: CMRSNPQG

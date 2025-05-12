@@ -12,17 +12,17 @@ ERT:
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-            energy: 384.0
+            energy: 3072.0
           - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-            energy: 384.0
+            energy: 3072.0
           - name: read
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-            energy: 384.0
+            energy: 3072.0
       - name: system_top_level.shared_glb[1..1]
         actions:
           - name: write

@@ -8,7 +8,7 @@ shared_glb [ Inputs:14336 (14336) Outputs:12544 (12544) ]
 ---------------------------------------------------------
 |       for M in [0:4)
 |         for R in [0:3)
-|           for C in [0:2)
+|           for C in [0:128)
 
 inter_PE_spatial [ ] 
 --------------------
@@ -16,14 +16,13 @@ inter_PE_spatial [ ]
 
 pe_spad [ Outputs:98 (98) ] 
 ---------------------------
-|               for C in [0:64)
-|                 for Q in [0:7)
+|               for Q in [0:7)
 
 weight_reg [ Weights:1 (1) ] 
 ----------------------------
-|                   for P in [0:14)
+|                 for P in [0:14)
 
 input_activation_reg [ Inputs:1 (1) ] 
 output_activation_reg [ Outputs:1 (1) ] 
 ---------------------------------------
-|                     << Compute >>
+|                   << Compute >>

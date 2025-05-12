@@ -5,8 +5,8 @@ architecture:
         class: DRAM
         attributes:
             type: "LPDDR4"
-            width: 24
-            datawidth: 8
+            width: 192
+            datawidth: 16
             has_power_gating: false
             n_banks: 2
             cluster_size: 1
@@ -24,9 +24,9 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
+          - update
           - read
           - write
-          - update
           - leak
         enabled: true
         area_scale: 1.0
@@ -57,9 +57,9 @@ architecture:
             n_instances: 1
             n_rw_ports: 1
         required_actions:
+          - update
           - read
           - write
-          - update
           - leak
         enabled: true
         area_scale: 1.0
@@ -148,9 +148,9 @@ architecture:
             static_energy_scale: 0.09375
             n_rdwr_ports: 1
         required_actions:
+          - update
           - read
           - write
-          - update
           - leak
         enabled: true
         area_scale: 1.0
@@ -189,9 +189,9 @@ architecture:
             static_energy_scale: 0.5
             n_rdwr_ports: 1
         required_actions:
+          - update
           - read
           - write
-          - update
           - leak
         enabled: true
         area_scale: 1.0
@@ -231,9 +231,9 @@ architecture:
             static_energy_scale: 0.125
             n_rdwr_ports: 1
         required_actions:
+          - update
           - read
           - write
-          - update
           - leak
         enabled: true
         area_scale: 1.0
